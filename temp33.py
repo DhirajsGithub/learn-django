@@ -1,3 +1,5 @@
+# setting to host it on render
+
 """
 Django settings for drinks project.
 
