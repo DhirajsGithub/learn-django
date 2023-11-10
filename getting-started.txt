@@ -1,0 +1,53 @@
+create a virtual environment
+$ python3 -m venv .venv
+
+#activate the virtual environment
+If you’re using bash or zsh, use:
+$ source .venv/bin/activate
+
+install django and django rest framework in the virtual environment
+$ pip install django
+$ pip install djangorestframework
+
+shows all the commands available
+$ django-admin 
+
+start a new project in the current directory (.)
+$ django-admin startproject drinks .
+
+run the server
+$ python manage.py runserver
+
+applying migrations to the database
+$ python manage.py migrate
+
+creating a superuser for the admin panel (username: admin, password: admin) 
+$ python manage.py createsuperuser
+
+NOTE : need to add drinks app to the INSTALLED_APPS list in drinks/settings.py
+creating a model in drinks/models.py and then running the following commands
+$ python manage.py makemigrations drinks
+$ python manage.py migrate
+
+we can register differnt tables we want to show on admin panel by creating a file drinks/admin.py
+it's just for test purpose, we can delete it later
+
+if anything goes wrong make sure to check the vscode interpreter and select the virtual environment
+using the command palette (ctrl+shift+p) and search for python interpreter
+
+https://www.youtube.com/watch?v=wczWm8j4v9w
+# connecting to database url postgresql
+from render we creared a hosted PostgreSQL
+$ pip install dj-database-url
+$ pip install psycopg2-binary
+above command is for connecting to postgresql database from django app 
+
+$ python manage.py migrate
+chanages in settings.py
+
+you can check the database in tableplus app just copy paste the postgresql url from render
+just use import from URL feature from tableplus when you press + button
+
+"postgres://YourUserName:YourPassword@YourHostname:5432/YourDatabaseName";
+
+NOTE: all the settings in settings.py are done with to capture env variable and host the app and databse on render
