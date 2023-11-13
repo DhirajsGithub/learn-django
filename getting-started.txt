@@ -24,7 +24,7 @@ $ python manage.py migrate
 creating a superuser for the admin panel (username: admin, password: admin) 
 $ python manage.py createsuperuser
 
-NOTE : need to add drinks app to the INSTALLED_APPS list in drinks/settings.py
+NOTE : need to add drinks app, and rest_frameworks to the INSTALLED_APPS list in drinks/settings.py
 creating a model in drinks/models.py and then running the following commands
 $ python manage.py makemigrations drinks
 $ python manage.py migrate
